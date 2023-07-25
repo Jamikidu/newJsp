@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\green_project\new_jspwork\java_work\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4017355097.index
+2235049623.index
+1101032193.index
+1965584364.index
+4006366068.index
