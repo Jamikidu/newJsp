@@ -1,0 +1,19 @@
+package basic_p;
+
+public class TryCatch_369 {
+
+	public static void main(String[] args) {
+		
+		int no = 20;
+		for(int i=1;i<=no;i++) {
+			int[] arr = new int[no];
+			arr[i-1] = i;
+			try {
+				System.out.println(arr[i]);
+			} catch (Exception e) {
+				
+			}
+		}
+	}
+
+}

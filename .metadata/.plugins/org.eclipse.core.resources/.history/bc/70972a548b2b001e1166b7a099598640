@@ -1,0 +1,21 @@
+package basic_p;
+
+public class TryCatch_369 {
+
+	public static void main(String[] args) {
+		
+		for(int i=1;i<=20;i++) {
+			int one = i % 10;
+			System.out.println(one);
+			int tsn = one % 3;
+			
+			int result = one;
+			try {
+				System.out.println(one);
+			} catch (Exception e) {
+				System.out.println(one);
+			}
+		}
+	}
+
+}

@@ -1,0 +1,26 @@
+package basic_p;
+
+public class TryCatch_369 {
+
+	public static void main(String[] args) {
+		
+		for(int i=1;i<=20;i++) { // i는 1 초기값, 조건 21미만,증가 1씩
+			int one = i % 10; // one 은 1를 10으로 나누었을때 나머지 1~0
+			int three = one % 3;
+			try {
+				
+				int a = 1234/three;
+				System.out.println(i+", "+ one +", "+ three);
+			} catch (Exception e) {
+				
+				try {
+					int a = 123/one;
+					System.out.println("짝, "+ one +", "+ three);
+				} catch (Exception e2) {
+					System.out.println(i+", "+ one +", "+ three);
+				}
+			}
+		}
+	}
+
+}

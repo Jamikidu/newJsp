@@ -1,0 +1,19 @@
+package basic_p;
+
+public class TryCatch_369 {
+
+	public static void main(String[] args) {
+		
+		for(int i=1;i<=20;i++) {
+			int one = i % 10;
+			
+			int tsn = one % 3;
+			try {
+				System.out.println("짝");
+			} catch (Exception e) {
+				System.out.println(i);
+			}
+		}
+	}
+
+}
