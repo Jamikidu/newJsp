@@ -7,6 +7,8 @@ C:\green_project\new_jspwork\java_work\.metadata\.plugins\org.eclipse.jst.jsp.co
 \jspProj\src\main\java
 C:\green_project\new_jspwork\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3045101612.index
 \jspProj\src\main\java
+C:\green_project\new_jspwork\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1188494232.index
+\jspProj\src\main\java
 C:\green_project\study\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\326206460.index
 \jspProj\src\main\java
 C:\green_project\new_jspwork\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\326206460.index
