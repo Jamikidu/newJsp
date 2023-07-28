@@ -9,7 +9,7 @@
 </head>
 <body>
 <%
-	/*String [] noArr = request.getParameterValues("no");
+	String [] noArr = request.getParameterValues("no");
 	int even = 0;			//짝수
 	int even_count = 0;		//짝수 개수
 	int odd = 0;			//홀수
@@ -29,44 +29,12 @@
 		} catch (Exception e) {
 			System.out.println("문자 '" + n +"' 는 더할 수 없습니다.");
 		}
-	}*/
-	String [] per = request.getParameterValues("per");
-	String [] kor = request.getParameterValues("kor");
-	String [] eng = request.getParameterValues("eng");
-	String [] meth = request.getParameterValues("meth");
-	
-	int [] sum = new int[per.length];
-	float [] avg = new float[per.length];
-	for(int i=0; i<sum.length; i++){
-		sum[i] += Integer.parseInt(kor[i])+Integer.parseInt(eng[i])+Integer.parseInt(meth[i]);
-		avg[i] += (float)sum[i] / 3;
-	};
+	}
 %>
 <h1>numReg</h1>
-<%-- no: <%=request.getParameter("no") %><br/>
+no: <%=request.getParameter("no") %><br/>
 noArr: <%=Arrays.toString(noArr) %><br/>
-짝수의 합: <%=even %><br/> --%>
+짝수의 합: <%=even %><br/>
 
-<table border="">
-	<tr>
-		<th>이름</th>
-		<th>국어</th>
-		<th>수학</th>
-		<th>영어</th>
-		<th>총점</th>
-		<th>평균</th>
-	</tr>
-	
-	 <% for(int i=0;i<per.length;i++){ %>
-	 <tr>
-		<td><input type="text" value="<%=per[i] %>" /></td>
-		<td><input type="text" value="<%=kor[i] %>" /></td>
-		<td><input type="text" value="<%=eng[i] %>" /></td>
-		<td><input type="text" value="<%=meth[i] %>" /></td>
-		<td><input type="text" value="<%=sum[i] %>" /></td>
-		<td><input type="text" value="<%=avg[i] %>" /></td>
-	</tr>
-	<% } %>
-</table>
 </body>
 </html>

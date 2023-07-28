@@ -42,22 +42,17 @@
 			
 		</tr>
 		<tr>
-			<td>이름</td>
-			<td>국어</td>
-			<td>수학</td>
-			<td>영어</td>
+			<td>no</td>
+			<td>점수</td>
 		</tr>
 		
 		 <% for(int i=0;i<cnt;i++){ %>
 		 <tr>
-			<td><input type="text" name="per" value="사람<%=i+1 %>"/></td>
-			<td><input type="text" name="kor" value="<%=(int)(Math.random()*90)+10 %>" /></td>
-			<td><input type="text" name="eng" value="<%=(int)(Math.random()*90)+10 %>" /></td>
-			<td><input type="text" name="meth" value="<%=(int)(Math.random()*90)+10 %>" /></td>
+		 	<td><%= i %></td>
+			<td><input type="text" name="no" value="<%=(int)(Math.random()*90)+10 %>" /></td>
 		</tr>
 		<% } %>
 		<tr>
-			<td></td>
 			<td></td>
 			<td colspan="2" align="right">
 				<input type="submit" value="계산" />
