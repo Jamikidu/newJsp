@@ -6,7 +6,7 @@ public class ArrayMain {
 
 	public static void main(String[] args) {
 		int a = 10;
-		int [] arr1 = {11,22,33};  //배열 생성 및 초기화 후 주소 대입 (new int[] 가 생략되어 있음)
+		int [] arr1 = {11,22,33};  //배열 생성 및 초기화 후 주소에 값대입 (new int[] 가 생략되어 있음)
 		
 		System.out.println("a: "+a);
 		System.out.println("arr1: "+arr1+"=>"+arr1.length);  //[I@515f550a
@@ -22,12 +22,16 @@ public class ArrayMain {
 		System.out.println("a: "+a);
 		System.out.println("arr1: "+arr1+"=>"+arr1.length);
 		
-		int [] arr2 = new int[4];
+		int [] arr2 = new int[4];  // 밑에 출력된것 처럼 모든 인덱스에 0이 들어가 있음
+		String [] str1 = new String[5];  // String [] 배열은 null 값이 들어가 있음
 		System.out.println("arr2: "+arr2+"=>"+arr2.length);
+		System.out.println(Arrays.toString(arr2));
+		System.out.println(Arrays.toString(str1));
+		System.out.println(String.format("%.3f", 3.15151515f));
 		
-		int [] arr3 = arr1;  //shallow copy
+		int [] arr3 = arr1;  //shallow copy :: 얕은 복사
 		
-		//deep copy
+		//deep copy :: 깊은 복사
 		int [] arr4 = new int[arr1.length];
 		for(int i=0; i<arr4.length; i++) {
 			arr4[i] = arr1[i];

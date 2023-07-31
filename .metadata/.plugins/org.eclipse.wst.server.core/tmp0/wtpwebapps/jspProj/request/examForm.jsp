@@ -22,7 +22,7 @@
 			<td>영어</td>
 			<td>수학</td>
 		</tr>
-<c:forEach var="pp"  items="<%=pnames %>">		
+<c:forEach var="pp"  items="<%=pnames %>">  <!-- forEach 향상 for문 -->
 		<tr>
 			<td><input type="text" name="pname"  value="${pp }"/></td>
 			<td><input type="text" name="kor" value="<%=rd.nextInt(40,100) %>" /></td>
