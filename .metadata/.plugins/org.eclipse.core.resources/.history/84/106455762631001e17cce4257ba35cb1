@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주민등록번호</title>
+</head>
+<body>
+<h1>주민등록번호를 등록하세요</h1>
+<form action="output.jsp" method="post">
+<table border="">
+	<tr>
+		<td><input type="text" name="name" placeholder="이름">이름</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+
+<input type="text" name="frontNum"> - <input type="text" name="backNum">
+<button type="submit">제출</button>
+</form>
+</body>
+</html>

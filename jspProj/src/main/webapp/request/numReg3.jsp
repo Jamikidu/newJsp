@@ -56,12 +56,12 @@
 	
 	 <% for(int i=0;i<per.length;i++){ %>
 	 <tr align="center">
-		<td><%=per[i] %></td>
-		<td><%=kor[i] %></td>
-		<td><%=eng[i] %></td>
-		<td><%=math[i] %></td>
-		<td><%=soc[i] %></td>
-		<td><%=sci[i] %></td>
+		<td><%=exam[i].getName() %></td>
+		<td><%=exam[i].getJum()[0] %></td>  <!-- Jum은 점수들의 집합이므로 그냥 getJum()하면 배열의 주소가 나옴 -->
+		<td><%=exam[i].getJum()[1] %></td>
+		<td><%=exam[i].getJum()[2] %></td>
+		<td><%=exam[i].getJum()[3] %></td>
+		<td><%=exam[i].getJum()[4] %></td>
 		<td style="color: blue; font-weight: bold;"><%=exam[i].getTot() %></td>
 		<td style="background-color: #006cb7; color: #fff; font-weight: bold;"><%=exam[i].getAvg2() %></td>
 		<td style="background-color: #006cb7; color: #fff; font-weight: bold;"><%=exam[i].getGrade()%></td>
@@ -89,16 +89,16 @@
 		<th>&emsp;등수&emsp;</th>
 	</tr>
 	
-	 <% for(int r=1; r<=per.length; r++){  /* rank 1번부터 출력하기 위해서 초기값 r=1로 설정 */
+	 <% for(int r=1; r<=per.length; r++){  /* rank(순위) 1번부터 출력하기 위해서 초기값 r=1로 설정 */
 			for(int i=0; i<per.length; i++){
 				if(r == exam[i].getRank()){ %>  <!-- for문 돌리고 getRank()로 등수를 불러와서 r과 같다면 tr,td 출력 -->
 					<tr align="center">
-						<td><%=per[i] %></td>
-						<td><%=kor[i] %></td>
-						<td><%=eng[i] %></td>
-						<td><%=math[i] %></td>
-						<td><%=soc[i] %></td>
-						<td><%=sci[i] %></td>
+						<td><%=exam[i].getName() %></td>
+						<td><%=exam[i].getJum()[0] %></td>
+						<td><%=exam[i].getJum()[1] %></td>
+						<td><%=exam[i].getJum()[2] %></td>
+						<td><%=exam[i].getJum()[3] %></td>
+						<td><%=exam[i].getJum()[4] %></td>
 						<td style="color: blue; font-weight: bold;"><%=exam[i].getTot() %></td>
 						<td style="background-color: #006cb7; color: #fff; font-weight: bold;"><%=exam[i].getAvg2() %></td>
 						<td style="background-color: #006cb7; color: #fff; font-weight: bold;"><%=exam[i].getGrade()%></td>

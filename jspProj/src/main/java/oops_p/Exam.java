@@ -47,6 +47,10 @@ public class Exam {
 	}
 	
 	// 불러오는 경우만 필요할것 같아서 set은 선언해주지않았습니다
+	public String getName() {
+		return name;
+	}
+	
 	public int getTot() {
 		return tot;
 	}
@@ -65,6 +69,10 @@ public class Exam {
 
 	public String getGrade() {
 		return grade;
+	}
+
+	public int[] getJum() {
+		return jum;
 	}
 	
 	

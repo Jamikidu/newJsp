@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>redirect</title>
+</head>
+<body>
+<h1>redirect > a</h1>
+<script type="text/javascript">
+	alert("돌아왔구나 오태식이");
+	location.href="b.jsp";  /* 스크립트 이용해서 b.jsp로 주소이동 */
+</script>
+<%
+	request.setAttribute("pname", "aaa");
+	response.sendRedirect("b.jsp");
+%>
+</body>
+</html>
