@@ -16,15 +16,15 @@
 	String jumin = request.getParameter("jumin");
 	String pname = request.getParameter("pname");
 	
-	int sv = jumin.charAt(7)-'0'-1;
+	int sv = jumin.charAt(7)-'0'-1;  /* 주민번호 7번째 자리 값 에서 -1 */
 	
 	
 	
 	
 	
 	
-	/*
-			-1	/2
+	/*  규칙성을 찾아내서 계산
+			-1	/2  // 2로 나누었을때 몫이 같은 것끼리 묶음
 	19	1	0	0
 	19	2	1	0
 	20	3	2	1
@@ -35,7 +35,7 @@
 	20	8	7	3
 	
 	
-			-1	%4	/2	+19
+			-1	%4	/2	+19  // sv에서 
 	19	1	0	0	0	19
 	19	2	1	1	0	19
 	20	3	2	2	1	20
@@ -64,24 +64,17 @@
 	
 	String birthStr = String.join("-", birth);
 	
-	
-	if( today.before(new SimpleDateFormat("yyyy-MM-dd").parse(birthStr))){
-		out.println("생일안지남<br/>");
-		sv = 2;
-	}else{
-		sv = 0;
+	String goUrl = "child";
+	if(sv >= 4){
+		goUrl = "foreign";
+	}else if( today.after(new SimpleDateFormat("yyyy-MM-dd").parse(birthStr))){
+		
+		goUrl = "adult";
 	}
-	out.println(today+"<br/>");
-	
-	out.println(birthStr);
-	out.println(pname+"<br/>");
-	
-	
-	String [] arr = "adult,child,foreign,foreign".split(",");
-	String goUrl = arr[sv/2];
 	out.println(goUrl);
 	String ppname = URLEncoder.encode(pname,"UTF-8");
-	//response.sendRedirect(goUrl+".jsp?ppname="+ppname+"&year="+1111);
+	response.sendRedirect(goUrl+
+			".jsp?ppname="+ppname+"&year="+birth[0]+"&month="+birth[1]+"&day="+birth[2]);
 %>
 </body>
 </html>
