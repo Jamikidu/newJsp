@@ -41,12 +41,15 @@ public class BoardController extends HttpServlet {
 		System.out.println(serviceStr);
 		
 		try {
+			request.setCharacterEncoding("UTF-8");
+			request.setAttribute("mainPage", serviceStr);
+			
 			BoardService service = (BoardService)Class.forName("ser_p."+serviceStr).newInstance();
 			service.execute(request,response);
 			
 			
 			
-			request.setAttribute("mainPage", serviceStr);
+			
 			
 			RequestDispatcher dispatcher =
 					request.getRequestDispatcher("/views/template.jsp");

@@ -17,7 +17,7 @@ public class BList implements BoardService{
 		System.out.println("BList.execute() 실행");
 		
 		ArrayList<BoardDTO> mainData = new BoardDAO().list();
-		System.out.println(mainData);
+		//System.out.println(mainData);
 		
 		request.setAttribute("mainData",new BoardDAO().list());
 	}

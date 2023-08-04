@@ -1,0 +1,10 @@
+url을 받음
+웹서버로 이동(tomcat)
+프로젝트로 이동
+컨트롤러로 이동(url 뒤에 글자에 따라 처리)
+service(doget,dopost)
+db 갔다가
+다시 돌아옴 service
+다시 컨트롤러
+template로 forward
+template에서 include로 보여줌

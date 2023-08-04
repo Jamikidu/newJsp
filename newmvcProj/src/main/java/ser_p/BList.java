@@ -10,7 +10,7 @@ public class BList implements BoardService {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		request.setAttribute("BListTitle", "내가만든게시판");
+		request.setAttribute("BListTitle", "내가만든쿠키~");
 		System.out.println("BList.execute() 실행");
 	}
 	
