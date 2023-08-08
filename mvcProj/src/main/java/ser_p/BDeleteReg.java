@@ -19,6 +19,7 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import control.BoardService;
 import model_p.BoardDAO;
 import model_p.BoardDTO;
+import model_p.PageData;
 
 public class BDeleteReg implements BoardService{
 	
@@ -27,7 +28,7 @@ public class BDeleteReg implements BoardService{
 		
 		String path = request.getRealPath("up");
 		path = "C:\\green_project\\new_jspwork\\java_work\\mvcProj\\src\\main\\webapp\\up";
-		
+		PageData pd = (PageData)request.getAttribute("pd");
 		
 			
 			BoardDTO dto = new BoardDTO();
@@ -35,7 +36,7 @@ public class BDeleteReg implements BoardService{
 			dto.setPw( request.getParameter("pw"));
 			
 			String msg = "비밀번호가 일치하지 않습니다.";
-			String goUrl = "BDeleteForm?id="+dto.getId();
+			String goUrl = "BDeleteForm?id="+dto.getId()+"&page="+pd.page;
 			
 			System.out.println(dto);
 			//id/pw 검사 및 파일정보가져오기
@@ -50,11 +51,11 @@ public class BDeleteReg implements BoardService{
 				//DB에서 삭제
 				new BoardDAO().delete(dto);
 				msg = "삭제되었습니다.";
-				goUrl = "BList";
+				goUrl = "BList?page="+pd.page;
 			}
 			
 			
-			request.setAttribute("mainPage", "alert"); // execute()가 끝날때 바꿔치기
+			request.setAttribute("mainPage", "inc/alert"); // execute()가 끝날때 바꿔치기
 			request.setAttribute("msg", msg);
 			request.setAttribute("goUrl", goUrl);
 		

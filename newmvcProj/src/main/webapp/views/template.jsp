@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-
-
-
+	String mainUrl = "board/"+request.getAttribute("mainPage")+".jsp";
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>template</title>
+<title>메인페이지</title>
 </head>
 <body>
 <table border="">
@@ -17,7 +15,7 @@
 		<td><jsp:include page="inc/header.jsp" /></td>
 	</tr>
 	<tr>
-		<td>메인</td>
+		<td><jsp:include page="<%=mainUrl %>" /></td>
 	</tr>
 	<tr>
 		<td><jsp:include page="inc/footer.jsp" /></td>

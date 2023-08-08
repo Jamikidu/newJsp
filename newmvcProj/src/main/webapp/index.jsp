@@ -9,6 +9,6 @@
 <body>
 newmvcProj
 
-<a href="board/BList">새게시판</a>
+<a href="board/PList">포켓몬도감</a>
 </body>
 </html>

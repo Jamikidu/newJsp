@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model_p.PageData;
 import ser_p.BList;
 
 /**
@@ -42,13 +43,11 @@ public class BoardController extends HttpServlet {
 		
 		try {
 			request.setCharacterEncoding("UTF-8");
-			request.setAttribute("mainPage", serviceStr);
+			request.setAttribute("mainPage", "board/"+serviceStr);
+			request.setAttribute("pd",new PageData(request)); //페이지정보를 컨트롤러에서 다 뿌리기위해서 가져옴
 			
 			BoardService service = (BoardService)Class.forName("ser_p."+serviceStr).newInstance();
 			service.execute(request,response);
-			
-			
-			
 			
 			
 			RequestDispatcher dispatcher =
