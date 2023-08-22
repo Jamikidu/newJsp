@@ -28,6 +28,12 @@
 <a href="forward/a.jsp?nick=ccc">forward</a>
 <a href="include/a.jsp?nick=ccc">include</a>
 <a href="redirectExam/input.jsp">내식대로 주민등록번호계산</a>
-
+<h2>cookie</h2>
+<a href="cookie/make.jsp">make</a>
+<a href="cookie/view.jsp">view</a>
+<a href="cookie/modify.jsp">modify</a>
+<a href="cookie/delete.jsp">delete</a>
+<a href="cookie/logMain.jsp">로그인</a>
+<a href="cookie/myLogMain.jsp">My로그인</a>
 </body>
 </html>
