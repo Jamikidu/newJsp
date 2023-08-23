@@ -1,0 +1,14 @@
+폼
+1. 모델폼(ModelForm) -> UserForm  class Meta:
+model = Post
+2. 일반폼(Form)
+
+
+장바구니 - cart(Session 방식)
+Cart 클래스 - cart.py
+삽입,수정,삭제 조회
+패키지 - __init__.py 존재
+폴더(디렉토리)
+제품 수량 - quantity -> forms.py -> AddProductForm
+
+shop - Cartegory, Products
