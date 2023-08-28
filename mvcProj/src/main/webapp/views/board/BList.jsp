@@ -24,7 +24,7 @@ i++;
 		<% for(int n=0;n<dto.getLev();n++) {%>
 			&nbsp;&nbsp;
 		<%} if(dto.getLev() > 0){ %>
-			└
+			
 		<%} %>
 			<a href="BDetail?id=<%=dto.getId()%>&page=<%=pd.page%>"><%=dto.getTitle() %></a>
 		</td>
