@@ -17,7 +17,9 @@ public class FileDown implements BoardService{
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) {  // 알아서 public 이 붙음 interface에 의해서
 		String fName = request.getParameter("fname");
+		System.out.println("fName:"+fName);
 		String path = request.getRealPath("up");
+		System.out.println("path:"+path);
 		path = "C:\\green_project\\new_jspwork\\java_work\\mvcProj\\src\\main\\webapp\\up";
 		
 		

@@ -32,8 +32,8 @@ public class PageData {
 		System.out.println(pageTotal);
 		
 		
-		
 		start = (page-1)*limit;
+		
 		pageStart = (page-1)/pageLimit*pageLimit+1;
 		pageEnd = pageStart + pageLimit -1;
 		
@@ -42,7 +42,7 @@ public class PageData {
 		}
 		
 		System.out.println(pageTotal+", "+pageEnd);
-		
+		System.out.println("start:"+start);
 	}
 	
 	
